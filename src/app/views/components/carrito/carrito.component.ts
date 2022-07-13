@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTable } from '@angular/material/table';
 import { Instrument } from '../../interfaces/instruments.interface';
 import { InstrumentsService } from '../../services/instruments.service';
 
@@ -14,7 +15,18 @@ export class CarritoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  displayedColumns: string[] = ['tipo','nombre', 'marca', 'precio', 'cantidad', 'total'];
+  displayedColumns: string[] = ['spr', 'tipo','nombre', 'marca', 'precio', 'cantidad', 'total'];
   dataSource = this.insService.carrito;
+
+  @ViewChild(MatTable) table!: MatTable<Instrument>;
+
+  getTotal() {
+    return this.insService.carrito.map(c => c.precio).reduce((acc, value)=> acc + value, 0)
+  }
+
+  quitarCarrito(id: number){
+    this.insService.quitar(id);
+    this.table.renderRows();
+  }
 
 }

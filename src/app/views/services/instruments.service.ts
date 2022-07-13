@@ -17,4 +17,9 @@ export class InstrumentsService {
   anadir(item: Instrument) {
     this._carrito.push(item)
   }
+
+  quitar(id: number) {
+    this._carrito.splice( this._carrito.findIndex( (c) => c.id === id) , 1 );
+    // console.log(this._carrito)
+  }
 }

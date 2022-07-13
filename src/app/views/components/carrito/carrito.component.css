@@ -5,3 +5,17 @@ table {
 .card-carrito {
     width: 800px;
 }
+
+h2 {
+    margin: 0;
+    font-size: 15pt;
+}
+
+h3 {
+    margin: 0;
+    font-size: 13pt;
+}
+
+.mini {
+    transform: scale(0.75);
+}

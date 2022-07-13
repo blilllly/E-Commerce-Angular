@@ -23,10 +23,7 @@ export class InstrumentCardComponent implements OnInit {
       `${ item.marca } ${item.nombre} se añadió al carrito`,
       undefined,
       {
-        duration: 3000,
-        horizontalPosition: 'center',
-        verticalPosition: 'top',
-        panelClass: ['mat-primary']
+        duration: 3000
       }
     );
   }
