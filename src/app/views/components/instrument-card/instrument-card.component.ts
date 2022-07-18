@@ -18,15 +18,24 @@ export class InstrumentCardComponent implements OnInit {
   @Input() items: Instrument[]= [];
 
   anadirCarrito(item: Instrument) {
-    this.insService.anadir(item);
-    // console.log(item);
-    this._snackBar.open(
-      `${ item.marca } ${item.nombre} se añadió al carrito`,
-      undefined,
-      {
-        duration: 2500
-      }
-    );
+    if(this.insService.anadir(item)){
+      this._snackBar.open(
+        `${ item.marca } ${item.nombre} se añadió al carrito`,
+        undefined,
+        {
+          duration: 2500
+        }
+      );
+    }else{
+      this._snackBar.open(
+        `${ item.marca } ${item.nombre} se sumó al carrito`,
+        undefined,
+        {
+          duration: 2500
+        }
+      );
+    }
+    
   }
 
 }

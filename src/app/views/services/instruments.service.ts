@@ -14,10 +14,17 @@ export class InstrumentsService {
     return this._carrito;
   }
 
-  anadir(item: Instrument) {
-    item.cantidad = 1;
-    item.subtotal = item.precio * item.cantidad;
-    this._carrito.push(item)
+  anadir(item: Instrument): boolean {
+    
+    if(this._carrito.includes(item)){
+      this.mas(item.id)
+      return false
+    }else{
+      item.cantidad = 1;
+      item.subtotal = item.precio * item.cantidad;
+      this._carrito.push(item)
+      return true
+    }
   }
 
   quitar(id: number) {
