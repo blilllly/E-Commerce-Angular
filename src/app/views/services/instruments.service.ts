@@ -16,13 +16,13 @@ export class InstrumentsService {
 
   anadir(item: Instrument): boolean {
     
-    if(this._carrito.includes(item)){
+    if( this._carrito.some( x => x.id === item.id ) ){
       this.mas(item.id)
       return false
     }else{
       item.cantidad = 1;
       item.subtotal = item.precio * item.cantidad;
-      this._carrito.push(item)
+      this._carrito.push( item )
       return true
     }
   }

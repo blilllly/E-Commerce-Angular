@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Instrument } from '../../interfaces/instruments.interface';
+import { Instrument } from '../../../interfaces/instruments.interface';
 
 @Component({
   selector: 'app-guitarras',
