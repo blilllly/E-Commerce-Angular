@@ -3,7 +3,7 @@ table {
 }
 
 .card-carrito {
-    width: 800px;
+    width: 1000px;
 }
 
 h2 {
@@ -18,4 +18,16 @@ h3 {
 
 .mini {
     transform: scale(0.75);
+}
+
+input {
+    width: 45px;
+    height: 42px;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.centrar {
+    align-content: center;
 }

@@ -21,11 +21,21 @@ export class CarritoComponent implements OnInit {
   @ViewChild(MatTable) table!: MatTable<Instrument>;
 
   getTotal() {
-    return this.insService.carrito.map(c => c.precio).reduce((acc, value)=> acc + value, 0)
+    return this.insService.carrito.map(c => c.subtotal!).reduce((acc, value)=> acc + value, 0)
   }
 
   quitarCarrito(id: number){
     this.insService.quitar(id);
+    this.table.renderRows();
+  }
+
+  mas(id: number) {
+    this.insService.mas(id)
+    this.table.renderRows();
+  }
+
+  menos( id: number ) {
+    this.insService.menos(id)
     this.table.renderRows();
   }
 

@@ -6,7 +6,14 @@ export interface Instrument {
     descripcion:    string;
     rutaImg:        string;
     precio:         number;
+    cantidad?:      number;
+    subtotal?:      number;
 }
+
+// export interface Carrito {
+//     instrument:     Instrument;
+//     cantidad?:      number;
+// }
 
 // export interface Guitar {
 //     id:             number;

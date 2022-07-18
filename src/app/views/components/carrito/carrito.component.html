@@ -54,14 +54,22 @@
         <!-- Cantidad Column -->
         <ng-container matColumnDef="cantidad">
           <th mat-header-cell *matHeaderCellDef><h2>Cantidad</h2></th>
-          <td mat-cell *matCellDef="let element"><h3> 1 </h3></td>
+          <td mat-cell *matCellDef="let element">
+            <h3>
+              <div class="centar">
+                <button class="btn btn-primary" (click)="menos(element.id)">-</button>
+                <input matInput type="number" value="{{element.cantidad}}" readonly="true">
+                <button class="btn btn-primary" (click)="mas(element.id)">+</button>
+              </div>
+            </h3>
+          </td>
           <td mat-footer-cell *matFooterCellDef><h2> Total: </h2></td>
         </ng-container>
 
         <!-- Total Column -->
         <ng-container matColumnDef="total">
           <th mat-header-cell *matHeaderCellDef><h2>Total</h2></th>
-          <td mat-cell *matCellDef="let element"><h3> {{element.precio | currency}} </h3></td>
+          <td mat-cell *matCellDef="let element"><h3> {{element.subtotal | currency}} </h3></td>
           <td mat-footer-cell *matFooterCellDef><h2> {{getTotal() | currency}} </h2></td>
         </ng-container>
       
