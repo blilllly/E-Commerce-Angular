@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
 import { Instrument } from '../../interfaces/instruments.interface';
-import { InstrumentsService } from '../../services/instruments.service';
+import { CarritoService } from '../../services/carrito.service';
 
 @Component({
   selector: 'app-carrito',
@@ -10,32 +10,32 @@ import { InstrumentsService } from '../../services/instruments.service';
 })
 export class CarritoComponent implements OnInit {
 
-  constructor(private insService: InstrumentsService) { }
+  constructor(private carService: CarritoService) { }
 
   ngOnInit(): void {
   }
 
   displayedColumns: string[] = ['spr', 'tipo','nombre', 'marca', 'precio', 'cantidad', 'total'];
-  dataSource = this.insService.carrito;
+  dataSource = this.carService.carrito;
 
   @ViewChild(MatTable) table!: MatTable<Instrument>;
 
   getTotal() {
-    return this.insService.carrito.map(c => c.subtotal!).reduce((acc, value)=> acc + value, 0)
+    return this.carService.carrito.map(c => c.subtotal!).reduce((acc, value)=> acc + value, 0)
   }
 
   quitarCarrito(id: number){
-    this.insService.quitar(id);
+    this.carService.quitar(id);
     this.table.renderRows();
   }
 
   mas(id: number) {
-    this.insService.mas(id)
+    this.carService.mas(id)
     this.table.renderRows();
   }
 
   menos( id: number ) {
-    this.insService.menos(id)
+    this.carService.menos(id)
     this.table.renderRows();
   }
 

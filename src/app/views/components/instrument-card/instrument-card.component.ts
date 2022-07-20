@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Instrument } from '../../interfaces/instruments.interface';
-import { InstrumentsService } from '../../services/instruments.service';
+import { CarritoService } from '../../services/carrito.service';
 
 @Component({
   selector: 'app-instrument-card',
@@ -10,7 +10,7 @@ import { InstrumentsService } from '../../services/instruments.service';
 })
 export class InstrumentCardComponent implements OnInit {
 
-  constructor(private _snackBar: MatSnackBar, private insService: InstrumentsService) { }
+  constructor(private _snackBar: MatSnackBar, private carService: CarritoService) { }
 
   ngOnInit(): void {
   }
@@ -18,7 +18,7 @@ export class InstrumentCardComponent implements OnInit {
   @Input() items: Instrument[]= [];
 
   anadirCarrito(item: Instrument) {
-    if(this.insService.anadir(item)){
+    if(this.carService.anadir(item)){
       this._snackBar.open(
         `${ item.marca } ${item.nombre} se añadió al carrito`,
         undefined,

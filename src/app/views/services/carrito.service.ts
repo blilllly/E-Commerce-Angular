@@ -4,7 +4,7 @@ import { Instrument } from '../interfaces/instruments.interface';
 @Injectable({
   providedIn: 'root'
 })
-export class InstrumentsService {
+export class CarritoService {
 
   private _carrito: Instrument[] = [];
 

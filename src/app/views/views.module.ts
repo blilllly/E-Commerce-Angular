@@ -7,8 +7,8 @@ import { GuitarrasComponent } from './pages/instruments/guitarras/guitarras.comp
 import { InstrumentCardComponent } from './components/instrument-card/instrument-card.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { AmplisComponent } from './pages/instruments/amplis/amplis.component';
-import { PagoComponent } from './pages/pago/pago.component';
 import { AddInstrumentComponent } from './pages/add-instrument/add-instrument.component';
+import { ImgPipe } from './components/pipes/img.pipe';
 
 
 
@@ -20,8 +20,8 @@ import { AddInstrumentComponent } from './pages/add-instrument/add-instrument.co
     InstrumentCardComponent,
     CarritoComponent,
     AmplisComponent,
-    PagoComponent,
-    AddInstrumentComponent
+    AddInstrumentComponent,
+    ImgPipe
   ],
   imports: [
     CommonModule,
