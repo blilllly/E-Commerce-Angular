@@ -11,7 +11,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ item.titulo }}</h5>
           <p class="card-text">{{ item.contenido }}</p>
-          <a (click)="newResp()" class="btn btn-primary">Responder</a>
+          <a [routerLink]="[ '/respInput', item.id ]" class="btn btn-primary">Responder</a>
         </div>
 
         <div *ngFor="let resp of respArray" class="card col-11" align="right">

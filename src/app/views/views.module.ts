@@ -14,7 +14,7 @@ import { MicrosComponent } from './pages/instruments/micros/micros.component';
 import { PreguntasComponent } from './pages/preguntas/preguntas.component';
 import { PreguntaInputComponent } from './components/pregunta-input/pregunta-input.component';
 import { RespuestaInputComponent } from './components/respuesta-input/respuesta-input.component';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -35,7 +35,8 @@ import { RespuestaInputComponent } from './components/respuesta-input/respuesta-
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ]
 })
 export class ViewsModule { }

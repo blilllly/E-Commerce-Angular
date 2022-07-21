@@ -23,7 +23,4 @@ export class PreguntasComponent implements OnInit {
     this.router.navigate([ '/pregInput' ])
   }
 
-  newResp() {
-    this.router.navigate([ '/respInput'])
-  }
 }

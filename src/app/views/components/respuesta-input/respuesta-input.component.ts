@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { QaService } from '../../services/qa.service';
 import { Respuestas } from '../../interfaces/instruments.interface';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-respuesta-input',
@@ -11,13 +11,15 @@ import { Router } from '@angular/router';
 })
 export class RespuestaInputComponent implements OnInit {
 
-  constructor(private qaService: QaService, private router: Router) { }
+  constructor(private qaService: QaService, private router: Router, private route: ActivatedRoute) { }
+
+  id: string = this.route.snapshot.paramMap.get('id')!;
 
   ngOnInit(): void {
   }
 
   resp = new FormGroup ({
-    idPre: new FormControl(0, Validators.required),
+    idPre: new FormControl(Number(this.id), Validators.required),
     nombre: new FormControl('', Validators.required),
     titulo: new FormControl('', Validators.required),
     contenido: new FormControl('', Validators.required)

@@ -51,7 +51,7 @@ const routes: Routes = [
     component: PreguntaInputComponent
   },
   {
-    path: 'respInput',
+    path: 'respInput/:id',
     component: RespuestaInputComponent
   },
   {
