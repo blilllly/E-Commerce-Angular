@@ -12,6 +12,8 @@ import { ImgPipe } from './components/pipes/img.pipe';
 import { BajosComponent } from './pages/instruments/bajos/bajos.component';
 import { MicrosComponent } from './pages/instruments/micros/micros.component';
 import { PreguntasComponent } from './pages/preguntas/preguntas.component';
+import { PreguntaInputComponent } from './components/pregunta-input/pregunta-input.component';
+import { RespuestaInputComponent } from './components/respuesta-input/respuesta-input.component';
 
 
 
@@ -27,7 +29,9 @@ import { PreguntasComponent } from './pages/preguntas/preguntas.component';
     ImgPipe,
     BajosComponent,
     MicrosComponent,
-    PreguntasComponent
+    PreguntasComponent,
+    PreguntaInputComponent,
+    RespuestaInputComponent
   ],
   imports: [
     CommonModule,

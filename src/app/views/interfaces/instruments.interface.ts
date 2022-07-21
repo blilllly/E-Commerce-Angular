@@ -10,6 +10,20 @@ export interface Instrument {
     subtotal?:      number;
 }
 
+export interface Preguntas {
+    id:             number;
+    nombre:         string;
+    titulo:         string;
+    contenido:      string;
+}
+
+export interface Respuestas {
+    idPre:          number;
+    nombre:         string;
+    titulo:         string;
+    contenido:      string;
+}
+
 // export interface Carrito {
 //     instrument:     Instrument;
 //     cantidad?:      number;

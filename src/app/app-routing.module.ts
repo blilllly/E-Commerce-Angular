@@ -9,6 +9,8 @@ import { BajosComponent } from './views/pages/instruments/bajos/bajos.component'
 import { AmplisComponent } from './views/pages/instruments/amplis/amplis.component';
 import { MicrosComponent } from './views/pages/instruments/micros/micros.component';
 import { PreguntasComponent } from './views/pages/preguntas/preguntas.component';
+import { PreguntaInputComponent } from './views/components/pregunta-input/pregunta-input.component';
+import { RespuestaInputComponent } from './views/components/respuesta-input/respuesta-input.component';
 
 const routes: Routes = [
   {
@@ -43,6 +45,14 @@ const routes: Routes = [
   {
     path: 'preguntas',
     component: PreguntasComponent
+  },
+  {
+    path: 'pregInput',
+    component: PreguntaInputComponent
+  },
+  {
+    path: 'respInput',
+    component: RespuestaInputComponent
   },
   {
     path: '**',
