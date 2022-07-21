@@ -3,18 +3,18 @@ import { InstrumentService } from '../../../services/instrument.service';
 import { Instrument } from '../../../interfaces/instruments.interface';
 
 @Component({
-  selector: 'app-amplis',
-  templateUrl: './amplis.component.html',
+  selector: 'app-micros',
+  templateUrl: './micros.component.html',
   styles: [
   ]
 })
-export class AmplisComponent implements OnInit {
+export class MicrosComponent implements OnInit {
 
   constructor(private insService: InstrumentService) { }
 
   ngOnInit(): void {
   }
 
-  public ampliArray: Instrument[] = this.insService.amplificadores
+  public microArray: Instrument[] = this.insService.micros
 
 }

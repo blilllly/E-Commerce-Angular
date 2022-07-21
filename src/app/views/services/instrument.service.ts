@@ -63,11 +63,26 @@ export class InstrumentService {
       precio: 949.99
     }
   ];
+  private _ampliArray: Instrument[] = [];
+  private _bajoArray: Instrument[] = [];
+  private _microArray: Instrument[] = [];
   
   constructor(private _snackBar: MatSnackBar) { }
 
   get guitarras() {
     return this._guitarArray
+  }
+
+  get amplificadores() {
+    return this._ampliArray
+  }
+
+  get bajos() {
+    return this._bajoArray
+  }
+
+  get micros() {
+    return this._microArray
   }
 
   addInstrument(ins: Instrument) {
@@ -77,10 +92,37 @@ export class InstrumentService {
         this.snackError()
       }
       else {
-        // console.log(this._guitarArray.length)
         this._guitarArray.push(ins)
-        // console.log(this._guitarArray.length)
-        // console.log(ins)
+        this.snackSuccess()
+      }
+    }
+
+    if( ins.tipo === 'amplificador' ) {
+      if( this._ampliArray.some( x => x.id === ins.id ) ) {
+        this.snackError()
+      }
+      else {
+        this._ampliArray.push(ins)
+        this.snackSuccess()
+      }
+    }
+
+    if( ins.tipo === 'bajo' ) {
+      if( this._bajoArray.some( x => x.id === ins.id ) ) {
+        this.snackError()
+      }
+      else {
+        this._bajoArray.push(ins)
+        this.snackSuccess()
+      }
+    }
+
+    if( ins.tipo === 'microfono' ) {
+      if( this._microArray.some( x => x.id === ins.id ) ) {
+        this.snackError()
+      }
+      else {
+        this._microArray.push(ins)
         this.snackSuccess()
       }
     }

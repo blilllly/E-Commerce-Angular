@@ -28,6 +28,7 @@ export class AddInstrumentComponent implements OnInit {
   })
 
   anadirInstrument (){
+    this.instrument.value.precio = this.instrument.value.precio! + 0.99;
     this.instrument.value.rutaImg = this.ruta;
     this.insService.addInstrument(this.instrument.value as Instrument)
     // console.log(this.instrument.value as Instrument)

@@ -21,9 +21,9 @@ export class LoginComponent {
 
   onSubmit(){
 
-    if (this.usuarioLogin.value.usuario=="billy" && this.usuarioLogin.value.password=="123")
+    if (this.usuarioLogin.value.usuario=="admin" && this.usuarioLogin.value.password=="admin")
     {      
-      this.router.navigate(['/']);      
+      this.router.navigate(['/add']);      
       this.dialogRef.close(); 
     }
     else

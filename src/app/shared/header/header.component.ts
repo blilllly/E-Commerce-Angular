@@ -25,6 +25,22 @@ export class HeaderComponent implements OnInit {
     this.router.navigate([ '/guitarras' ])
   }
 
+  navAmplis() {
+    this.router.navigate([ '/amplis' ])
+  }
+
+  navBajos() {
+    this.router.navigate([ '/bajos' ])
+  }
+
+  navMicros() {
+    this.router.navigate([ '/micros' ])
+  }
+
+  navPreguntas() {
+    this.router.navigate([ '/preguntas' ])
+  }
+
   navHome() {
     this.router.navigate([ '/' ])
   }

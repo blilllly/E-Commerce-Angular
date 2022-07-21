@@ -5,6 +5,10 @@ import { LoginComponent } from './views/pages/login/login.component';
 import { WelcomeComponent } from './views/pages/welcome/welcome.component';
 import { GuitarrasComponent } from './views/pages/instruments/guitarras/guitarras.component';
 import { AddInstrumentComponent } from './views/pages/add-instrument/add-instrument.component';
+import { BajosComponent } from './views/pages/instruments/bajos/bajos.component';
+import { AmplisComponent } from './views/pages/instruments/amplis/amplis.component';
+import { MicrosComponent } from './views/pages/instruments/micros/micros.component';
+import { PreguntasComponent } from './views/pages/preguntas/preguntas.component';
 
 const routes: Routes = [
   {
@@ -21,8 +25,24 @@ const routes: Routes = [
     component: GuitarrasComponent
   },
   {
+    path: 'bajos',
+    component: BajosComponent
+  },
+  {
+    path: 'amplis',
+    component: AmplisComponent
+  },
+  {
+    path: 'micros',
+    component: MicrosComponent
+  },
+  {
     path: 'add',
     component: AddInstrumentComponent
+  },
+  {
+    path: 'preguntas',
+    component: PreguntasComponent
   },
   {
     path: '**',

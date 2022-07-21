@@ -9,6 +9,9 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 import { AmplisComponent } from './pages/instruments/amplis/amplis.component';
 import { AddInstrumentComponent } from './pages/add-instrument/add-instrument.component';
 import { ImgPipe } from './components/pipes/img.pipe';
+import { BajosComponent } from './pages/instruments/bajos/bajos.component';
+import { MicrosComponent } from './pages/instruments/micros/micros.component';
+import { PreguntasComponent } from './pages/preguntas/preguntas.component';
 
 
 
@@ -21,7 +24,10 @@ import { ImgPipe } from './components/pipes/img.pipe';
     CarritoComponent,
     AmplisComponent,
     AddInstrumentComponent,
-    ImgPipe
+    ImgPipe,
+    BajosComponent,
+    MicrosComponent,
+    PreguntasComponent
   ],
   imports: [
     CommonModule,
