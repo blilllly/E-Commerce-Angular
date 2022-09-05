@@ -11,8 +11,8 @@ export class QaService {
     {
       id: 1,
       nombre: 'Neysser Tenemea',
-      titulo: 'Hola mundo',
-      contenido: 'El que tenga miedo a morir que no nazca.'
+      titulo: 'No sé como comprar',
+      contenido: 'Ayudapor favor no sé como comprar una guitarra'
     }
   ]
 
@@ -20,14 +20,14 @@ export class QaService {
     {
       idPre: 1,
       nombre: 'Pradin',
-      titulo: 'Dinero y Rastas',
-      contenido: 'JAJAJJAJA'
+      titulo: 'Yo tampoco',
+      contenido: 'Tampoco se por favor ayuda con eso'
     },
     {
       idPre: 1,
       nombre: 'Ruiz',
-      titulo: 'Hola bb',
-      contenido: 'Ya que contigo no existe la labia'
+      titulo: 'Clic al boton',
+      contenido: 'Se le tiene que dar clic al botón de pago'
     }
   ]
 
